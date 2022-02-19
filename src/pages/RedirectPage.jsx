@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import './RedirectPage.css';
 import { Redirect } from 'react-router-dom';
 import { getAcessToken } from '../service/getAcessToken';
+import RedirectLoader from '../components/RedirectLoader';
 
 class RedirectPage extends Component {
   state = {
@@ -9,7 +11,7 @@ class RedirectPage extends Component {
 
   componentDidMount(){
     getAcessToken();
-    this.setState({ redirect: true });
+    // this.setState({ redirect: true });
   }
 
   render() {
@@ -17,7 +19,8 @@ class RedirectPage extends Component {
     return (
       <>
       { redirect ? <Redirect to="/profile" /> : false}
-      <div>RedirectPage</div>
+      <h1>kaka</h1>
+      <RedirectLoader />
       </>
     )
   }

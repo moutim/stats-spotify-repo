@@ -21,7 +21,6 @@ class Login extends Component {
 
   render() {
     const { url, redirect } = this.state;
-    console.log(process.env);
     return (
         <>
         { redirect && <Redirect to={ url } />}
