@@ -1,0 +1,21 @@
+article div img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+article div:nth-child(1) {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+article div p {
+    width: 80%;
+    font-size: 20px;
+    margin: 20px auto;
+    font-weight: 600;
+    text-align: center;
+}
