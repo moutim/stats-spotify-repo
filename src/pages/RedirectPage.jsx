@@ -11,7 +11,7 @@ class RedirectPage extends Component {
 
   componentDidMount(){
     getAcessToken();
-    // this.setState({ redirect: true });
+    this.setState({ redirect: true });
   }
 
   render() {

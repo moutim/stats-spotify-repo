@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import HeaderProfile from '../components/HeaderProfile';
 
 class Profile extends Component {
+  
+
   render() {
     return (
-      <div>
-          <h1>Profile</h1>
-      </div>
+      <>
+      <HeaderProfile />
+      </>
     )
   }
 }

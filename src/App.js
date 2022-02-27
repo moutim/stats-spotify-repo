@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
-import Login from './pages/Login'
+import React, { Component } from 'react';
+import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Login from './pages/Login';
 import RedirectPage from './pages/RedirectPage';
-import Profile from './pages/Profile'
+import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 
 class App extends Component {
