@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Top10Artists.css';
+import './Top3.css';
 import { getUserTopArtists } from '../service/endPointsAPI';
 import Card from './Card';
 
