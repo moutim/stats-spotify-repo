@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getUserInfo from '../service/endPointsAPI';
+import { getUserInfo } from '../service/endPointsAPI'
 import ProfileLoader from './ProfileLoader';
 import './HeaderProfile.css';
 import pin from '../images/pin.svg'

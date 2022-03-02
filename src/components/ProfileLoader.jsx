@@ -1,7 +1,7 @@
 import React from 'react'
 import ContentLoader from 'react-content-loader'
 
-const Card = props => {
+const Loader = props => {
   return (
     <ContentLoader viewBox="0 0 260 160" height={160} width={260} {...props}>
       <circle cx="50" cy="30" r="30" />
@@ -16,4 +16,4 @@ const Card = props => {
   )
 }
 
-export default Card
+export default Loader

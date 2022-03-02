@@ -1,10 +1,13 @@
 import fetchData from "./fetchAPI";
 
-const getUserInfo = async () => {
+async function getUserInfo () {
     const data = await fetchData('v1/me');
     return data;
 }
 
-const teste = () => console.log('ddddd');
+const getUserTopArtists = async (time = 'medium_term') => {
+    const data = await fetchData(`v1/me/top/artists?time_range=${time}&limit=50`);
+    return data;
+}
 
-export default getUserInfo
+export { getUserInfo, getUserTopArtists };
