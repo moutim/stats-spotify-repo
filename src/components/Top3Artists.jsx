@@ -17,10 +17,10 @@ class Top10Artists extends Component {
   render() {
     const { artists, loading } = this.state;
     return (
-      <section className="section-top-artists">
+      <section className="section-top">
           <h2>Os 3 artistas mais ouvidos</h2>
           <div>
-            <div className="box-cards-artists">
+            <div className="box-cards">
               {
                 loading ? <p>Carregando...</p> : (
                     artists.map(({ name, images}, index) => (

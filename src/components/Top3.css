@@ -1,4 +1,4 @@
-.section-top-artists {
+.section-top {
     padding: 15px;
     background: rgba(18, 31, 58, 0.9);
     color: #FFA9AB;
@@ -7,56 +7,59 @@
     margin-top: 20px;
 }
 
-.section-top-artists h2 {
+.section-top h2 {
     text-align: center;
-    width: 100%;
-    font-size: 24px;
+    /* width: 100%; */
+    /* font-size: 23px; */
+    white-space: nowrap;
     text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
 }
 
-.box-cards-artists {
+.box-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.box-cards-artists div {
+.box-cards div {
     width: 30%;
     /* padding: 5px; */
     text-align: center;
 }
 
-.box-cards-artists div img {
+.box-cards div img {
     max-width: 50%;
 }
 
-.box-cards-artists figure img {
+.box-cards figure img {
     max-width: 100%;
     box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.8);
 }
 
-.box-cards-artists figure figcaption {
+.box-cards figure figcaption {
     font-size: 13px;
     font-weight: 700;
     color: white;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.box-cards-artists div:nth-child(1) {
+.box-cards div:nth-child(1) {
     order: 2;
     margin: 0 10px;
 }
 
-.box-cards-artists div:nth-child(1) {
+.box-cards div:nth-child(1) {
     padding-bottom: 20px;
     /* color: black; */
 }
 
-.box-cards-artists div:nth-child(2) {
+.box-cards div:nth-child(2) {
     order: 1;
     margin-top: 30px;
 }
 
-.box-cards-artists div:nth-child(3) {
+.box-cards div:nth-child(3) {
     margin-top: 30px;
     order: 3;
 }

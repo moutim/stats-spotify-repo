@@ -10,4 +10,9 @@ const getUserTopArtists = async (time = 'medium_term') => {
     return data;
 }
 
-export { getUserInfo, getUserTopArtists };
+const getUserTopMusics = async (time = 'medium_term') => {
+    const data = await fetchData(`v1/me/top/tracks?time_range=${time}&limit=50`);
+    return data;
+}
+
+export { getUserInfo, getUserTopArtists, getUserTopMusics };
