@@ -2,7 +2,7 @@ const headers = () => {
     const acessToken = localStorage.getItem('acess_token');
     return {
         headers: {
-            'Authorization': `Bearer ${acessToken}`
+            'Authorization': 'Bearer ' + acessToken
         }
     };
 };
