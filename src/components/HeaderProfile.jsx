@@ -12,7 +12,6 @@ class HeaderProfile extends Component {
     
     async componentDidMount() {
         const data = await getUserInfo();
-        console.log(data);
         const { followers: { total }, country, display_name, external_urls: { spotify }, images } = data;
         const urlImage = images[0].url;
         this.setState({ userInfo: { country, display_name, spotify, urlImage, total }, loader: false });

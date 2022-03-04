@@ -2,17 +2,16 @@ import React, { Component } from 'react';
 import { getUserTopMusics } from '../service/endPointsAPI';
 import Card from './Card';
 
-class Top10Musics extends Component {
-    state = {
-        artists: [],
-        loading: true,
-    }
-    
-    async componentDidMount() {
+class Top3Musics extends Component {
+  state = {
+      artists: [],
+      loading: true,
+  }
+  
+  async componentDidMount() {
     const { items } = await getUserTopMusics();
-    console.log(items);
-    this.setState({ musics: items, loading: false})
-    }
+    this.setState({ musics: items, loading: false});
+  }
 
   render() {
     const { musics, loading } = this.state;
@@ -46,4 +45,4 @@ class Top10Musics extends Component {
   }
 }
 
-export default Top10Musics
+export default Top3Musics

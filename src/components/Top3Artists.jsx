@@ -2,20 +2,25 @@ import React, { Component } from 'react';
 import './Top3.css';
 import { getUserTopArtists } from '../service/endPointsAPI';
 import Card from './Card';
+import { connect } from 'react-redux';
+import { sendArrayTopArtists } from '../redux/actions';
 
-class Top10Artists extends Component {
+class Top3Artists extends Component {
   state = {
     artists: [],
     loading: true,
   }
 
   async componentDidMount() {
+    const { dispatch } = this.props;
     const { items } = await getUserTopArtists();
-    this.setState({ artists: items, loading: false})
+    this.setState({ artists: items, loading: false});
+    dispatch(sendArrayTopArtists('MEDIUM', items ));
   }
 
   render() {
     const { artists, loading } = this.state;
+    console.log(this.props);
     return (
       <section className="section-top">
           <h2>Os 3 artistas mais ouvidos</h2>
@@ -46,4 +51,4 @@ class Top10Artists extends Component {
   }
 }
 
-export default Top10Artists
+export default connect()(Top3Artists)
