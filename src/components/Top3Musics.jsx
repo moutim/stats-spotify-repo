@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { sendArrayTopMusics } from '../redux/actions';
 import { getUserTopMusics } from '../service/endPointsAPI';
 import Card from './Card';
 
@@ -9,8 +11,10 @@ class Top3Musics extends Component {
   }
   
   async componentDidMount() {
+    const { dispatch } = this.props;
     const { items } = await getUserTopMusics();
     this.setState({ musics: items, loading: false});
+    dispatch(sendArrayTopMusics('MEDIUM', items))
   }
 
   render() {
@@ -45,4 +49,4 @@ class Top3Musics extends Component {
   }
 }
 
-export default Top3Musics
+export default connect()(Top3Musics);
