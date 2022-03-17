@@ -1,4 +1,4 @@
-const { REACT_APP_AUTHORIZE_URL, REACT_APP_CLIENT_ID, REACT_APP_REDIRECT_URL } = process.env;
+const { REACT_APP_AUTHORIZE_URL, REACT_APP_CLIENT_ID, REACT_APP_REDIRECT_URL, REACT_APP_CLIENT_SECRET } = process.env;
 
 const scopesList = [
     'user-top-read',
@@ -18,11 +18,11 @@ const scopesList = [
 const redirectAcessURL = () => `${REACT_APP_AUTHORIZE_URL}?client_id=${REACT_APP_CLIENT_ID}&redirect_uri=${encodeURIComponent(REACT_APP_REDIRECT_URL)}&scope=${encodeURIComponent(scopesList)}&response_type=token`;
 
 const getAcessToken = () => {
-    const acessToken = window.location.hash.split('&')[0].split('=')[1];
-    localStorage.setItem('acess_token', acessToken);
+  const acessToken = window.location.hash.split('&')[0].split('=')[1];
+  localStorage.setItem('access_token', acessToken);
 }
 
 module.exports = {
-    redirectAcessURL,
-    getAcessToken,
+  redirectAcessURL,
+  getAcessToken,
 }

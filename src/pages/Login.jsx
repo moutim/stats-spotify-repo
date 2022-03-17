@@ -5,25 +5,14 @@ import logoSpotify from '../images/spotify-logo.png';
 import { redirectAcessURL } from '../service/getAcessToken';
 
 class Login extends Component {
-  constructor(){
-    super();
-
-    this.state = {
-      url: '',
-      redirect: false,
-    }
-  }
-
   handleLogin = () => {
     const url = redirectAcessURL();
     window.location = url;
   }
 
   render() {
-    const { url, redirect } = this.state;
     return (
         <>
-        { redirect && <Redirect to={ url } />}
             <main>
             <section >
                 <div>
