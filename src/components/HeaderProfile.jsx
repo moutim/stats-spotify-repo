@@ -17,11 +17,11 @@ class HeaderProfile extends Component {
         this.setState({ userInfo: { country, display_name, spotify, urlImage, total }, loader: false });
     }
 
-  render() {
+    render() {
     const { userInfo, loader } = this.state;
     return (
-      <header>
-          {
+    <header>
+        {
             loader ? <ProfileLoader className="loader" /> : (
                 <>
                     <figure>
@@ -45,11 +45,11 @@ class HeaderProfile extends Component {
                     </div>
                 </>
             )
-          }
-          <hr />
-      </header>
+        }
+        <hr />
+    </header>
     )
-  }
+}
 }
 
 export default HeaderProfile
