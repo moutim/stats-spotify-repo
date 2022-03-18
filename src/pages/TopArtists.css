@@ -1,10 +1,12 @@
 .top-artists {
     display: flex;
     flex-wrap: wrap;
-    background: rgba(18, 31, 58, 0.9);
+    /* background: rgba(18, 31, 58, 0.9); */
+    background: #121f3a;
     padding: 15px;
     border-radius: 20px;
     color: white;
+    box-shadow: 0px 4px 15px #000000;
 }
 .top-artists h2 {
     color: #FFA9AB;

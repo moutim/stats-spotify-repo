@@ -3,6 +3,7 @@ import HeaderProfile from '../components/HeaderProfile';
 import './TopArtists.css';
 import ArtistItemList from '../components/ArtistItemList';
 import { getUserTopArtists } from '../service/endPointsAPI';
+import TimeSelectionButtons from '../components/TimeSelectionButtons';
 
 class TopArtists extends Component {
   state = {
@@ -15,6 +16,12 @@ class TopArtists extends Component {
     this.setState({ artists: items, loading: false});
   }
 
+  handleSelectTime = async ({ target: { id }}) => {
+    this.setState({ loading: true });
+    const { items } = await getUserTopArtists(id);
+    this.setState({ artists: items, loading: false });
+  }
+
   render() {
     const { artists, loading } = this.state;
     return (
@@ -23,6 +30,7 @@ class TopArtists extends Component {
         <main>
           <article className="top-artists">
           <h2>Lista com os 50 artistas que você mais escutou!</h2>
+          <TimeSelectionButtons handleSelectTime={ this.handleSelectTime } />
             { loading ? <p>loading...</p> :
               artists.map(({ name, images }, index) => {
                 const { url } = images[0];

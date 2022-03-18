@@ -5,13 +5,13 @@ async function getUserInfo () {
     return data;
 }
 
-const getUserTopArtists = async (time = 'medium_term') => {
-    const data = await fetchData(`v1/me/top/artists?time_range=${time}&limit=50`);
+const getUserTopArtists = async (time = 'medium') => {
+    const data = await fetchData(`v1/me/top/artists?time_range=${time}_term&limit=50`);
     return data;
 }
 
-const getUserTopMusics = async (time = 'medium_term') => {
-    const data = await fetchData(`v1/me/top/tracks?time_range=${time}&limit=50`);
+const getUserTopMusics = async (time = 'medium') => {
+    const data = await fetchData(`v1/me/top/tracks?time_range=${time}_term&limit=50`);
     return data;
 }
 
