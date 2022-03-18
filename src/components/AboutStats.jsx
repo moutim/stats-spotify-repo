@@ -5,7 +5,7 @@ import './AboutStats.css';
 class AboutStats extends Component {
   render() {
     return (
-      <article>
+      <article className="aboutStats" >
           <div>
             <img src={ logoStats } alt="Logo da Stats Spotify" />
             Stats Spotify

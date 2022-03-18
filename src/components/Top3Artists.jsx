@@ -4,11 +4,13 @@ import { getUserTopArtists } from '../service/endPointsAPI';
 import Card from './Card';
 import { connect } from 'react-redux';
 import { sendArrayTopArtists } from '../redux/actions';
+import { Redirect } from 'react-router-dom';
 
 class Top3Artists extends Component {
   state = {
     artists: [],
     loading: true,
+    redirect: false,
   }
 
   async componentDidMount() {
@@ -18,11 +20,13 @@ class Top3Artists extends Component {
     dispatch(sendArrayTopArtists('MEDIUM', items ));
   }
 
+  redirectUserToPage = () => this.setState({ redirect: true });
+
   render() {
-    const { artists, loading } = this.state;
-    console.log(this.props);
+    const { artists, loading, redirect } = this.state;
     return (
       <section className="section-top">
+        { redirect && <Redirect to="/artists" /> }
           <h2>Os 3 artistas mais ouvidos</h2>
           <div>
             <div className="box-cards">
@@ -43,7 +47,7 @@ class Top3Artists extends Component {
             </div>
             <div className="info-card">
               <p>Essa lista tem como base os últimos <span>6 meses</span>,  entre aqui e veja também as mais tocadas desde de sempre ou do mês</p>
-              <button>Ver lista completa</button>
+              <button onClick={ this.redirectUserToPage }>Ver lista completa</button>
             </div>
           </div>
       </section>

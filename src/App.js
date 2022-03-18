@@ -7,6 +7,8 @@ import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import TopMusics from './pages/TopMusics';
+import TopArtists from './pages/TopArtists';
 
 class App extends Component {
   render() {
@@ -16,6 +18,8 @@ class App extends Component {
           <Route exact path="/" component={ Login } />
           <Route path="/redirect" component={ RedirectPage }/>
           <Route path="/profile" component={ Profile } />
+          <Route path="/musics" component={ TopMusics } />
+          <Route path="/artists" component={ TopArtists } />
           <Route path="*" component={ NotFound } />
         </Switch>
       </Provider>

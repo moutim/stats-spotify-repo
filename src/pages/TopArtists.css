@@ -1,0 +1,39 @@
+.top-artists {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(18, 31, 58, 0.9);
+    padding: 15px;
+    border-radius: 20px;
+    color: white;
+}
+.top-artists h2 {
+    color: #FFA9AB;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
+}
+
+.top-artists div {
+    width: 100%;
+    height: 7vh;
+}
+
+.top-artists img {
+    max-width: 15%;
+    margin: 2px 15px 2px 0;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.8);
+}
+
+.top-artists figure {
+    display: flex;
+    height: 100%;
+}
+
+.top-artists figure figcaption {
+    font-size: 14px;
+    align-self: center;
+    color: white;
+    line-height: 17px;
+}
+
+

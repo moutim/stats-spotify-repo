@@ -5,9 +5,8 @@ import Top3Artists from '../components/Top3Artists';
 import Top3Musics from '../components/Top3Musics';
 
 class Profile extends Component {
-  
-
   render() {
+    console.log(this.props);
     return (
       <>
       <HeaderProfile />
@@ -21,4 +20,4 @@ class Profile extends Component {
   }
 }
 
-export default Profile
+export default Profile;
