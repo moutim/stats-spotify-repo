@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-class ArtistItemList extends Component {
+class ItemList extends Component {
   render() {
-    const { url, name, index } = this.props;
+    const { url, name, index, type } = this.props;
     return (
       <div>
           <figure>
@@ -10,7 +10,7 @@ class ArtistItemList extends Component {
               <figcaption>
                 <span>{ `${index} - ${name}` }</span>
                 <br />
-                {'Artista'}
+                { type }
               </figcaption> 
           </figure>
       </div>
@@ -18,4 +18,4 @@ class ArtistItemList extends Component {
   }
 }
 
-export default ArtistItemList;
+export default ItemList;

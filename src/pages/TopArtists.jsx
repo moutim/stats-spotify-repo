@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import HeaderProfile from '../components/HeaderProfile';
-import './TopArtists.css';
-import ArtistItemList from '../components/ArtistItemList';
+import './TopItems.css';
+import ItemList from '../components/ItemList';
 import { getUserTopArtists } from '../service/endPointsAPI';
 import TimeSelectionButtons from '../components/TimeSelectionButtons';
 
@@ -35,7 +35,13 @@ class TopArtists extends Component {
               artists.map(({ name, images }, index) => {
                 const { url } = images[0];
                 return (
-                  <ArtistItemList key={ name } index={ index + 1} url={ url } name={ name } />
+                  <ItemList 
+                    key={ name }
+                    index={ index + 1}
+                    url={ url }
+                    name={ name }
+                    type={'Artista'}
+                  />
                 )
               })
             }
