@@ -78,10 +78,14 @@
     border-radius: 25px;
     border: none;
     background: #FFA9AB;
-    color: rgba(18, 31, 58, 0.9);
     font-size: 15px;
     font-weight: 900;
     margin-top: 10px;
+}
+
+.info-card button a {
+    text-decoration: none;
+    color: rgba(18, 31, 58, 0.9);
 }
 
 .info-card span {

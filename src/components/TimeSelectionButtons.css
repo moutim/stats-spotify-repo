@@ -10,7 +10,8 @@
     box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.8);
     color: white;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 .box-buttons button:nth-child(1) {

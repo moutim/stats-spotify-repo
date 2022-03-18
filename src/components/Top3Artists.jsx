@@ -6,12 +6,12 @@ import { connect } from 'react-redux';
 import { sendArrayTopArtists } from '../redux/actions';
 import { Redirect } from 'react-router-dom';
 import TimeSelectionButtons from '../components/TimeSelectionButtons';
+import { Link } from 'react-router-dom';
 
 class Top3Artists extends Component {
   state = {
     artists: [],
     loading: true,
-    redirect: false,
   }
 
   async componentDidMount() {
@@ -27,13 +27,10 @@ class Top3Artists extends Component {
     this.setState({ artists: items, loading: false });
   }
 
-  redirectUserToPage = () => this.setState({ redirect: true });
-
   render() {
-    const { artists, loading, redirect } = this.state;
+    const { artists, loading } = this.state;
     return (
       <section className="section-top">
-        { redirect && <Redirect to="/artists" /> }
           <h2>Os 3 artistas mais ouvidos</h2>
           <TimeSelectionButtons handleSelectTime={ this.handleSelectTime } />
           <div>
@@ -55,7 +52,7 @@ class Top3Artists extends Component {
             </div>
             <div className="info-card">
               <p>Essa lista tem como base os últimos <span>6 meses</span>,  entre aqui e veja também as mais tocadas desde de sempre ou do mês</p>
-              <button onClick={ this.redirectUserToPage }>Ver lista completa</button>
+              <button><Link to="/artists" >Ver lista completa</Link></button>
             </div>
           </div>
       </section>
