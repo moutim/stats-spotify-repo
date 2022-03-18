@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { sendArrayTopMusics } from '../redux/actions';
 import { getUserTopMusics } from '../service/endPointsAPI';
 import Card from './Card';
+import TimeSelectionButtons from './TimeSelectionButtons';
 
 class Top3Musics extends Component {
   state = {
-      artists: [],
+      musics: [],
       loading: true,
       redirect: false,
   }
   
   async componentDidMount() {
-    const { dispatch } = this.props;
     const { items } = await getUserTopMusics();
     this.setState({ musics: items, loading: false});
-    dispatch(sendArrayTopMusics('MEDIUM', items))
+  }
+
+  handleSelectTime = async ({ target: { id }}) => {
+    this.setState({ loading: true });
+    const { items } = await getUserTopMusics(id);
+    this.setState({ musics: items, loading: false });
   }
 
   redirectUserToPage = () => this.setState({ redirect:true });
@@ -27,6 +30,7 @@ class Top3Musics extends Component {
     <section className="section-top">
       { redirect && <Redirect to="/musics" />}
       <h2>As 3 músicas mais ouvidas</h2>
+      <TimeSelectionButtons handleSelectTime={ this.handleSelectTime } />
       <div>
         <div className="box-cards">
           {
@@ -54,4 +58,4 @@ class Top3Musics extends Component {
   }
 }
 
-export default connect()(Top3Musics);
+export default Top3Musics;

@@ -5,6 +5,7 @@ import Card from './Card';
 import { connect } from 'react-redux';
 import { sendArrayTopArtists } from '../redux/actions';
 import { Redirect } from 'react-router-dom';
+import TimeSelectionButtons from '../components/TimeSelectionButtons';
 
 class Top3Artists extends Component {
   state = {
@@ -20,6 +21,12 @@ class Top3Artists extends Component {
     dispatch(sendArrayTopArtists('MEDIUM', items ));
   }
 
+  handleSelectTime = async ({ target: { id }}) => {
+    this.setState({ loading: true });
+    const { items } = await getUserTopArtists(id);
+    this.setState({ artists: items, loading: false });
+  }
+
   redirectUserToPage = () => this.setState({ redirect: true });
 
   render() {
@@ -28,6 +35,7 @@ class Top3Artists extends Component {
       <section className="section-top">
         { redirect && <Redirect to="/artists" /> }
           <h2>Os 3 artistas mais ouvidos</h2>
+          <TimeSelectionButtons handleSelectTime={ this.handleSelectTime } />
           <div>
             <div className="box-cards">
               {
