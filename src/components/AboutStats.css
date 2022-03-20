@@ -3,19 +3,13 @@
     margin-right: 10px;
 }
 
-.aboutStats div:nth-child(1) {
-    padding-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-weight: 600;
-}
-
 .aboutStats div p {
-    width: 80%;
-    font-size: 20px;
-    margin: 20px auto;
+    font-size: 22px;
+    padding: 20px 0;
     font-weight: 600;
     text-align: center;
+}
+
+.aboutStats div span {
+    color: #C31626;
 }

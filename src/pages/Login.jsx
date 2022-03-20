@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Footer from '../components/Footer';
 import { redirectAcessURL } from '../service/getAcessToken';
 import './Login.css';
 import logoSpotify from '../images/spotify-logo.png';
@@ -22,7 +21,6 @@ class Login extends Component {
                 </button>
             </section>
         </main>
-        <Footer />
     </>
     )
   }

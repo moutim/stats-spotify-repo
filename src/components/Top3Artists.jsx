@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './Top3.css';
 import { getUserTopArtists } from '../service/endPointsAPI';
 import Card from './Card';
-import { connect } from 'react-redux';
-import { sendArrayTopArtists } from '../redux/actions';
 import { Link } from 'react-router-dom';
 
 class Top3Artists extends Component {
@@ -13,10 +11,8 @@ class Top3Artists extends Component {
   }
 
   async componentDidMount() {
-    const { dispatch } = this.props;
     const { items } = await getUserTopArtists();
     this.setState({ artists: items, loading: false});
-    dispatch(sendArrayTopArtists('MEDIUM', items ));
   }
 
   render() {
@@ -51,4 +47,4 @@ class Top3Artists extends Component {
   }
 }
 
-export default connect()(Top3Artists)
+export default Top3Artists;

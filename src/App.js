@@ -10,6 +10,7 @@ import store from './redux/store';
 import TopMusics from './pages/TopMusics';
 import TopArtists from './pages/TopArtists';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
           <Route path="/musics" component={ TopMusics } />
           <Route path="*" component={ NotFound } />
         </Switch>
+        <Footer />
       </Provider>
     )
   }
