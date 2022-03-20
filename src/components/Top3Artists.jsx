@@ -19,7 +19,7 @@ class Top3Artists extends Component {
     const { artists, loading } = this.state;
     return (
       <section className="section-top">
-          <h2>Os 3 artistas mais ouvidos nos últimos 6 meses</h2>
+          <h2>Os 3 artistas mais tocados nos últimos 6 meses</h2>
           <div>
             <div className="box-cards">
               {

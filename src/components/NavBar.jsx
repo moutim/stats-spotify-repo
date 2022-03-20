@@ -4,10 +4,27 @@ import menu from '../images/menu.png';
 import './NavBar.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { getUserInfo } from '../service/endPointsAPI';
+import { sendUserInfo } from '../redux/actions';
 
 class NavBar extends Component {
+  state = {
+    urlImage: '',
+    name: '',
+  }
+
+  async componentDidMount() {
+    const { sendUser } = this.props;
+    const { display_name, images } = await getUserInfo();
+    this.setState({ name: display_name, urlImage: images[0].url });
+    const info = {
+      name: display_name,
+      urlImage: images[0].url,
+    }
+    sendUser(info);
+  }
   render() {
-    const { urlImage } = this.props;
+    const { urlImage } = this.state;
     return (
         <header>
           <div>
@@ -17,7 +34,7 @@ class NavBar extends Component {
             <img 
             src={ urlImage ? urlImage : menu }
             className={ urlImage ? 'userImageHeader' : ''}
-            alt="Icone de menu" 
+            alt="Icone de menu"
             />
             <ul className="nav-links">
               <li>Home</li>
@@ -31,11 +48,11 @@ class NavBar extends Component {
 };
 
 NavBar.propTypes = {
-  urlImage: PropTypes.string.isRequired,
-}
+  urlImage: PropTypes.string,
+};
 
-const mapStateToProps = (state) => ({
-  urlImage: state.user.urlImage,
+const mapDispatchToProps = (dispatch) => ({
+  sendUser: (info) => dispatch(sendUserInfo(info)),
 });
 
-export default connect(mapStateToProps)(NavBar);
+export default connect(null, mapDispatchToProps)(NavBar);

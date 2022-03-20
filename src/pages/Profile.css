@@ -1,6 +1,7 @@
 .main-general {
-    background: url(../images/background-general.svg) no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     padding: 0 10px 30px 10px;
+}
+
+.main-general .cardIllustration {
+    margin-top: 30px;
 }

@@ -1,15 +1,14 @@
 .section-top {
     padding: 15px;
-    background: #3E1921;
-    color: #FFA9AB;
+    background: #2D46B9;
+    color: white;
     box-shadow: 0px 4px 15px #000000;
     border-radius: 20px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .section-top h2 {
     text-align: center;
-    color: #FFB654;
     text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -82,10 +81,10 @@
 
 .info-card button a {
     text-decoration: none;
-    color: #3E1921;
+    color: white;
 }
 
 .info-card span {
-    color: #FFB654;
+    color: #C31626;
     text-decoration: underline;
 }
