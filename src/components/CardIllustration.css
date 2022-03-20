@@ -1,0 +1,21 @@
+.cardIllustration {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardIllustration h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.cardIllustration p {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.cardIllustration img {
+    width: 75%;
+    margin: 0 auto 40px auto;
+}

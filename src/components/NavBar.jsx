@@ -16,7 +16,7 @@ class NavBar extends Component {
           <nav>
             <img 
             src={ urlImage ? urlImage : menu }
-            className={ urlImage ? 'userImageHeader' : false}
+            className={ urlImage ? 'userImageHeader' : ''}
             alt="Icone de menu" 
             />
             <ul className="nav-links">

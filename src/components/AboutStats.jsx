@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logoStats from '../images/logo.svg';
 import './AboutStats.css';
 import { getUserInfo } from '../service/endPointsAPI';
 import { connect } from 'react-redux';
