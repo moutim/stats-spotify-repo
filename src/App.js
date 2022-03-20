@@ -9,11 +9,13 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import TopMusics from './pages/TopMusics';
 import TopArtists from './pages/TopArtists';
+import NavBar from './components/NavBar';
 
 class App extends Component {
   render() {
     return (
       <Provider store={ store }>
+        <NavBar />
         <Switch>
           <Route exact path="/" component={ Login } />
           <Route path="/redirect" component={ RedirectPage }/>

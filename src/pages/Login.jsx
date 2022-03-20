@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
-import logoPlus from '../images/plus-music-logo.svg'
-import logoSpotify from '../images/spotify-logo.png';
+import React, { Component } from 'react';
+import Footer from '../components/Footer';
 import { redirectAcessURL } from '../service/getAcessToken';
+import './Login.css';
+import logoSpotify from '../images/spotify-logo.png';
 
 class Login extends Component {
   handleLogin = () => {
@@ -12,27 +12,17 @@ class Login extends Component {
 
   render() {
     return (
-        <>
-            <main>
-            <section >
-                <div>
-                    <img src={ logoPlus } alt="Logotipo do Plus Music em formato de disco de vinil."></img>
-                </div>
-
-                <div>
-                    <h2>Entre com sua conta Spotify</h2>
-                    <div>
-                        <img src={ logoSpotify } alt="Logo Spotify"></img>
-                        <button type="button" onClick={ this.handleLogin }>Entrar</button>
-                    </div>
-                </div>
-            </section>
+    <>
+        <main className="mainLogin">
             <section>
-                <p>Um lugar para compartilhar suas musicas favoritas,</p>
-                <p>Porque compartilhar e escutar muda tudo.</p>
+                <p>Descubra as músicas e artistas que você mais escutou ao longo do tempo no Spotify</p>
+                <button onClick={ this.handleLogin }>
+                  ENTRAR
+                  <img src={ logoSpotify } alt="Logo do Spotify" />
+                </button>
             </section>
         </main>
-        <footer>Play Music 2022 ® Desenvolvido por <a href="https://github.com/moutim">Vitor Moutim</a></footer>
+        <Footer />
     </>
     )
   }

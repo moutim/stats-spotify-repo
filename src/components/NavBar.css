@@ -1,0 +1,22 @@
+header {
+    display: flex;
+    background-color: white;
+    height: 60px;
+    padding: 3px;
+    justify-content: space-around;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+header div, nav {
+    display: flex;
+}
+
+header nav img {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+
+.nav-links {
+    display: none;
+}

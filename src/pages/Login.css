@@ -1,0 +1,40 @@
+.mainLogin {
+    background: url(../images/background-login.svg) no-repeat;
+    background-size: 100vw;
+    height: 100vh;
+    margin-top: 10px;
+}
+
+.mainLogin section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 5px 0 5px;
+}
+
+.mainLogin section button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: #C31626;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.mainLogin section button img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.mainLogin section p {
+    font-size: 36px;
+    font-weight: bold;
+}
