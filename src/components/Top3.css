@@ -1,6 +1,6 @@
 .section-top {
     padding: 15px;
-    background: rgba(18, 31, 58, 0.9);
+    background: #3E1921;
     color: #FFA9AB;
     box-shadow: 0px 4px 15px #000000;
     border-radius: 20px;
@@ -9,9 +9,7 @@
 
 .section-top h2 {
     text-align: center;
-    /* width: 100%; */
-    /* font-size: 23px; */
-    white-space: nowrap;
+    color: #FFB654;
     text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -67,9 +65,8 @@
 .info-card {
     padding-top: 20px;
     color: white;
-    /* width: 90%; */
     margin: auto;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .info-card button {
@@ -77,7 +74,7 @@
     height: 45px;
     border-radius: 25px;
     border: none;
-    background: #FFA9AB;
+    background: #C31626;
     font-size: 15px;
     font-weight: 900;
     margin-top: 10px;
@@ -85,10 +82,10 @@
 
 .info-card button a {
     text-decoration: none;
-    color: rgba(18, 31, 58, 0.9);
+    color: #3E1921;
 }
 
 .info-card span {
-    color: #FFA9AB;
+    color: #FFB654;
     text-decoration: underline;
 }

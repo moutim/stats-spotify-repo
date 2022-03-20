@@ -1,10 +1,10 @@
 .aboutStats div img {
-    width: 80px;
+    width: 90%;
     margin-right: 10px;
 }
 
 .aboutStats div:nth-child(1) {
-    margin-top: 20px;
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;

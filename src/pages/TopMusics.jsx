@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import HeaderProfile from '../components/HeaderProfile';
 import './TopItems.css';
 import ItemList from '../components/ItemList';
 import { getUserTopMusics } from '../service/endPointsAPI';
@@ -26,7 +25,6 @@ class TopMusics extends Component {
     const { musics, loading } = this.state;
     return (
       <>
-        <HeaderProfile />
         <main>
           <article className="top-artists">
           <h2>Lista com as 50 músicas que você mais escutou!</h2>

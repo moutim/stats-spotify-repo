@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
 import { getUserTopMusics } from '../service/endPointsAPI';
 import Card from './Card';
-import TimeSelectionButtons from './TimeSelectionButtons';
 
 class Top3Musics extends Component {
   state = {
@@ -16,18 +14,11 @@ class Top3Musics extends Component {
     this.setState({ musics: items, loading: false});
   }
 
-  handleSelectTime = async ({ target: { id }}) => {
-    this.setState({ loading: true });
-    const { items } = await getUserTopMusics(id);
-    this.setState({ musics: items, loading: false });
-  }
-
   render() {
     const { musics, loading } = this.state;
     return (
     <section className="section-top">
-      <h2>As 3 músicas mais ouvidas</h2>
-      <TimeSelectionButtons handleSelectTime={ this.handleSelectTime } />
+      <h2>As 3 músicas mais ouvidas nos últimos 6 meses</h2>
       <div>
         <div className="box-cards">
           {
@@ -46,7 +37,7 @@ class Top3Musics extends Component {
           }
         </div>
           <div className="info-card">
-            <p>Essa lista tem como base os últimos <span>6 meses</span>,  entre aqui e veja também as mais tocadas desde de sempre ou do mês</p>
+            <p>Quer ver uma lista completa com <span>50 músicas</span> e mudar o período das estatisticas? Clique no botão abaixo</p>
             <button><Link to="/musics">Ver lista completa</Link></button>
           </div>
       </div>

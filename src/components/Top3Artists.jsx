@@ -4,8 +4,6 @@ import { getUserTopArtists } from '../service/endPointsAPI';
 import Card from './Card';
 import { connect } from 'react-redux';
 import { sendArrayTopArtists } from '../redux/actions';
-import { Redirect } from 'react-router-dom';
-import TimeSelectionButtons from '../components/TimeSelectionButtons';
 import { Link } from 'react-router-dom';
 
 class Top3Artists extends Component {
@@ -21,18 +19,11 @@ class Top3Artists extends Component {
     dispatch(sendArrayTopArtists('MEDIUM', items ));
   }
 
-  handleSelectTime = async ({ target: { id }}) => {
-    this.setState({ loading: true });
-    const { items } = await getUserTopArtists(id);
-    this.setState({ artists: items, loading: false });
-  }
-
   render() {
     const { artists, loading } = this.state;
     return (
       <section className="section-top">
-          <h2>Os 3 artistas mais ouvidos</h2>
-          <TimeSelectionButtons handleSelectTime={ this.handleSelectTime } />
+          <h2>Os 3 artistas mais ouvidos nos últimos 6 meses</h2>
           <div>
             <div className="box-cards">
               {
@@ -51,7 +42,7 @@ class Top3Artists extends Component {
               }
             </div>
             <div className="info-card">
-              <p>Essa lista tem como base os últimos <span>6 meses</span>,  entre aqui e veja também as mais tocadas desde de sempre ou do mês</p>
+            <p>Quer ver uma lista completa com <span>50 artistas</span> e mudar o período das estatisticas? Clique no botão abaixo</p>
               <button><Link to="/artists" >Ver lista completa</Link></button>
             </div>
           </div>

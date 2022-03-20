@@ -1,0 +1,6 @@
+.main-general {
+    background: url(../images/background-general.svg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 15px;
+}
