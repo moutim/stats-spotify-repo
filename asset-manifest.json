@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/stats-spotify-repo/static/css/main.962b96c1.css",
+    "main.js": "/stats-spotify-repo/static/js/main.395efd40.js",
+    "static/js/787.b18d0079.chunk.js": "/stats-spotify-repo/static/js/787.b18d0079.chunk.js",
+    "static/media/illustration-03.svg": "/stats-spotify-repo/static/media/illustration-03.5e933bc3a5c544a57a3d937e5d029be3.svg",
+    "static/media/bronze-crown.png": "/stats-spotify-repo/static/media/bronze-crown.be6926c3c499ea0d9b54.png",
+    "static/media/silver-crown.png": "/stats-spotify-repo/static/media/silver-crown.b93f80e6dc68213acf65.png",
+    "static/media/illustration-01.svg": "/stats-spotify-repo/static/media/illustration-01.ed970916125eafc40c7da36aa30dcf51.svg",
+    "static/media/illustration-04.svg": "/stats-spotify-repo/static/media/illustration-04.f950ef184f6b76d98778df11a15daaac.svg",
+    "static/media/illustration-02.svg": "/stats-spotify-repo/static/media/illustration-02.9110474218514e40174ce40cd419df08.svg",
+    "static/media/illustration-05.svg": "/stats-spotify-repo/static/media/illustration-05.16c06eeea7ac13577cdee8f5711a7772.svg",
+    "static/media/logo.svg": "/stats-spotify-repo/static/media/logo.b636783022241ba7c2dc24ffe0e1427b.svg",
+    "static/media/gold-crown.png": "/stats-spotify-repo/static/media/gold-crown.286aefc7b430253dfc69.png",
+    "static/media/background-login.svg": "/stats-spotify-repo/static/media/background-login.71389904163a449ea3b4.svg",
+    "index.html": "/stats-spotify-repo/index.html",
+    "main.962b96c1.css.map": "/stats-spotify-repo/static/css/main.962b96c1.css.map",
+    "main.395efd40.js.map": "/stats-spotify-repo/static/js/main.395efd40.js.map",
+    "787.b18d0079.chunk.js.map": "/stats-spotify-repo/static/js/787.b18d0079.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.962b96c1.css",
+    "static/js/main.395efd40.js"
+  ]
+}
