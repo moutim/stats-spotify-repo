@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './TopItems.css';
+import './Top50.css';
 import ItemList from '../components/ItemList';
 import { getUserTopMusics } from '../service/endPointsAPI';
 import TimeSelectionButtons from '../components/TimeSelectionButtons';
