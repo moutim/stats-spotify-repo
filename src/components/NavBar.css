@@ -20,7 +20,27 @@ header nav img {
 }
 
 .nav-links {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-bottom: 1px solid;
+    transition: .5s;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hideNav {
     display: none;
+}
+
+.showNav {
+    display: block;
 }
 
 .userImageHeader {

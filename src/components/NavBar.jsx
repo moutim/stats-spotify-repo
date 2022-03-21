@@ -6,11 +6,13 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getUserInfo } from '../service/endPointsAPI';
 import { sendUserInfo } from '../redux/actions';
+import { Link } from 'react-router-dom';
 
 class NavBar extends Component {
   state = {
     urlImage: '',
     name: '',
+    itsShowing: false
   }
 
   async componentDidMount() {
@@ -23,9 +25,15 @@ class NavBar extends Component {
     }
     sendUser(info);
   }
+
+  handleOpenMenu = () => {
+    this.setState((prevState) => ({ itsShowing: !prevState.itsShowing}))
+  }
+
   render() {
-    const { urlImage } = this.state;
+    const { urlImage, itsShowing } = this.state;
     return (
+      <>
         <header>
           <div>
             <img src={ logo } alt="Logotipo Stats Spotify" />
@@ -35,14 +43,16 @@ class NavBar extends Component {
             src={ urlImage ? urlImage : menu }
             className={ urlImage ? 'userImageHeader' : ''}
             alt="Icone de menu"
+            onClick={ this.handleOpenMenu }
             />
-            <ul className="nav-links">
-              <li>Home</li>
-              <li>Musicas</li>
-              <li>Artistas</li>
-            </ul>
           </nav>
         </header>
+        <ul className={ itsShowing ? 'nav-links showNav' : 'nav-links hideNav'}>
+          <li><Link to="/profile">Home</Link></li>
+          <li><Link to="/musics">Músicas</Link></li>
+          <li><Link to="/artists">Artistas</Link></li>
+        </ul>
+        </>
     )
   }
 };
