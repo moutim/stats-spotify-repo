@@ -3,16 +3,26 @@ import './Top50.css';
 import ItemList from '../components/ItemList';
 import { getUserTopMusics } from '../service/endPointsAPI';
 import TimeSelectionButtons from '../components/TimeSelectionButtons';
+import illustration05 from '../images/illustration-05.svg';
+import CardIllustration from '../components/CardIllustration';
 
 class TopMusics extends Component {
   state = {
     musics: [],
     loading: true,
+    totalMinutes: 0,
+    artists: []
   }
 
   async componentDidMount() {
+    let totalMs = 0;
+    let artists = {};
     const { items } = await getUserTopMusics();
-    this.setState({ musics: items, loading: false});
+    items.forEach(({ album }) => artists[album.artists[0].name] = album.artists[0].name);
+    items.forEach(({ duration_ms }) => totalMs += duration_ms);
+    let totalSec = totalMs * 0.001;
+    let totalMinutes = (totalSec / 60).toFixed(0);
+    this.setState({ musics: items, loading: false, totalMinutes, artists: Object.keys(artists) });
   }
 
   handleSelectTime = async ({ target: { id }}) => {
@@ -22,11 +32,16 @@ class TopMusics extends Component {
   }
 
   render() {
-    const { musics, loading } = this.state;
+    const { musics, loading, totalMinutes, artists } = this.state;
     return (
       <>
-        <main>
-          <article className="top-artists">
+        <main className="main-general">
+          <CardIllustration 
+            title={`Uau! Sua lista de músicas da um total de ${totalMinutes} minutos! Que tal criar uma playlist com todas elas?`}
+            description={`Existem ao todo, ${artists.length} artistas na sua lista.`}
+            url={ illustration05 }
+          />
+          <article className="top-50">
           <h2>Lista com as 50 músicas que você mais escutou!</h2>
           <TimeSelectionButtons handleSelectTime={ this.handleSelectTime } />
             { loading ? <p>loading...</p> :
