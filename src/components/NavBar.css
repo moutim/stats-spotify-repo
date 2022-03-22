@@ -19,20 +19,8 @@ header nav img {
     align-self: center;
 }
 
-.nav-links {
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-bottom: 1px solid;
-    transition: .5s;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
+.animate__animated.animate__bounceInRight {
+    --animate-duration: 0.7s;
 }
 
 .hideNav {
@@ -41,6 +29,45 @@ header nav img {
 
 .showNav {
     display: block;
+}
+
+.nav-links {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 30px;
+    transition: .5s;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links li {
+    list-style: none;
+    line-height: 55px;
+}
+
+.logo-menu {
+    position: fixed;
+    bottom: 0;
+    width: 60%;
+    margin: 0 20px 10px 0;
+}
+
+.close-menu {
+    margin-top: 10px;
+    width: 25px;
+    align-self: flex-end;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.exit {
+    margin-top: 20px;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.8) !important;
 }
 
 .userImageHeader {
