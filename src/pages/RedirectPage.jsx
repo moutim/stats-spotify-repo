@@ -11,14 +11,14 @@ class RedirectPage extends Component {
 
   componentDidMount(){
     getAcessToken();
-    this.setState({ redirect: true });
+    // this.setState({ redirect: true });
   }
 
   render() {
     const { redirect } = this.state;
     return (
       <>
-      { redirect ? <Redirect to="/profile" /> : false}
+      { redirect ? <Redirect to="/stats-spotify-repo/profile" /> : false}
       <h1>kaka</h1>
       <RedirectLoader />
       </>

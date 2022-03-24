@@ -23,7 +23,7 @@ class App extends Component {
           <Route path="/stats-spotify-repo/profile" component={ Profile } />
           <Route path="/stats-spotify-repo/musics" component={ TopMusics } />
           <Route path="/stats-spotify-repo/artists" component={ TopArtists } />
-          <Route path="*" component={ NotFound } />
+          <Route path="/stats-spotify-repo/*" component={ NotFound } />
         </Switch>
         <Footer />
       </Provider>
