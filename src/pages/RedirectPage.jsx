@@ -18,7 +18,7 @@ class RedirectPage extends Component {
     const { redirect } = this.state;
     return (
       <>
-      { redirect ? <Redirect to="#/profile" /> : false}
+      { redirect ? <Redirect to="/profile" /> : false}
       <h1>kaka</h1>
       <RedirectLoader />
       </>

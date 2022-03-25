@@ -19,7 +19,7 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path="/" component={ Login } />
-          <Route path="/stats-spotify-repo/#/redirect" component={ RedirectPage }/>
+          <Route path="/redirect" component={ RedirectPage }/>
           <Route path="/profile" component={ Profile } />
           <Route path="/musics" component={ TopMusics } />
           <Route path="/artists" component={ TopArtists } />
