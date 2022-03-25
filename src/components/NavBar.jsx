@@ -50,9 +50,9 @@ class NavBar extends Component {
             onClick={ this.handleCloseMenu }
           />
           <ul onClick={ this.handleLinks }>
-              <li><Link to="/stats-spotify-repo/profile">Home</Link></li>
-              <li><Link to="/stats-spotify-repo/musics">Músicas</Link></li>
-              <li><Link to="/stats-spotify-repo/artists">Artistas</Link></li>
+              <li><Link to="/profile">Home</Link></li>
+              <li><Link to="/musics">Músicas</Link></li>
+              <li><Link to="/artists">Artistas</Link></li>
           </ul>
           <p>_</p>
           <a href="#f" className="exit">Sair</a>

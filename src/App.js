@@ -18,12 +18,12 @@ class App extends Component {
       <Provider store={ store }>
         <NavBar />
         <Switch>
-          <Route exact path="/stats-spotify-repo/" component={ Login } />
-          <Route path="/stats-spotify-repo/redirect" component={ RedirectPage }/>
-          <Route path="/stats-spotify-repo/profile" component={ Profile } />
-          <Route path="/stats-spotify-repo/musics" component={ TopMusics } />
-          <Route path="/stats-spotify-repo/artists" component={ TopArtists } />
-          <Route path="/stats-spotify-repo/*" component={ NotFound } />
+          <Route exact path="/" component={ Login } />
+          <Route path="/stats-spotify-repo/#/redirect" component={ RedirectPage }/>
+          <Route path="/profile" component={ Profile } />
+          <Route path="/musics" component={ TopMusics } />
+          <Route path="/artists" component={ TopArtists } />
+          <Route path="/*" component={ NotFound } />
         </Switch>
         <Footer />
       </Provider>
