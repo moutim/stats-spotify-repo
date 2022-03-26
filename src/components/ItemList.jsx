@@ -7,11 +7,10 @@ class ItemList extends Component {
       <div>
           <figure>
               <img src={ url } alt={ name } />
-              <figcaption>
-                <span>{ `${index} - ${name}` }</span>
-                <br />
-                { type }
-              </figcaption> 
+              <div>
+              <figcaption className="name-item">{ `${index} - ${name}` }</figcaption>
+              <figcaption>{ type }</figcaption>
+              </div>
           </figure>
       </div>
     )

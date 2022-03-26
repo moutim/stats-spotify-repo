@@ -32,6 +32,7 @@ header nav img {
 }
 
 .nav-links {
+    background-color: white;
     font-size: 30px;
     font-weight: bold;
     padding: 10px 30px;
@@ -39,6 +40,11 @@ header nav img {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
 .nav-links li {
