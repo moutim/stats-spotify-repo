@@ -1,4 +1,4 @@
-import fetchData from "./fetchAPI";
+import { fetchData, headersPlaylist } from "./fetchAPI";
 
 async function getUserInfo () {
     const data = await fetchData('v1/me');
@@ -15,4 +15,14 @@ const getUserTopMusics = async (time = 'medium') => {
     return data;
 }
 
-export { getUserInfo, getUserTopArtists, getUserTopMusics };
+const createPlaylist = async (time, id) => {
+    const data = await fetchData(`v1/users/${id}/playlists`, headersPlaylist(time));
+    return data;
+}
+
+const addMusicsPlaylist = async (playlistId, musics) => {
+    const data = await fetchData(`v1/playlists/${ playlistId }/tracks?uris=${encodeURIComponent(musics.join())}`, headersPlaylist());
+    return data;
+}
+
+export { getUserInfo, getUserTopArtists, getUserTopMusics, createPlaylist, addMusicsPlaylist };

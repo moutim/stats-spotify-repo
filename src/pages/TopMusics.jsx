@@ -37,7 +37,7 @@ class TopMusics extends Component {
       <>
         <main className="main-general">
           <CardIllustration 
-            title={`Uau! Sua lista de músicas da um total de ${totalMinutes} minutos! Que tal criar uma playlist com todas elas?`}
+            title={`Uau! Sua lista de músicas da um total de ${totalMinutes} minutos! Crie uma playlist com todas elas na página 'playlist' do menu`}
             description={`Existem ao todo, ${artists.length} artistas na sua lista.`}
             url={ illustration05 }
           />
