@@ -11,6 +11,7 @@ import TopMusics from './pages/TopMusics';
 import TopArtists from './pages/TopArtists';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import Playlists from './pages/Playlists';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/profile" component={ Profile } />
           <Route path="/musics" component={ TopMusics } />
           <Route path="/artists" component={ TopArtists } />
+          <Route path="/playlists" component={ Playlists } />
           <Route path="/*" component={ NotFound } />
         </Switch>
         <Footer />

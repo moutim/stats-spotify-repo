@@ -3,6 +3,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 .cardIllustration h2 {
