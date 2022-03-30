@@ -72,6 +72,7 @@ class NavBar extends Component {
                 <li><Link to="/musics">Músicas</Link></li>
                 <li><Link to="/artists">Artistas</Link></li>
                 <li><Link to="/playlists">Playlists</Link></li>
+                <li><a className="exit" href="#f">Sair</a></li>
               </ul>
             </div>
 

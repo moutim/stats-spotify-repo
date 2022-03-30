@@ -21,6 +21,15 @@ body {
   .mainLogin {
     padding-bottom: 30% !important;
   }
+
+  .main-general {
+    max-width: 750px;
+    margin: auto;
+  }
+
+  .cardIllustration img {
+    max-width: 70%;
+  }
 }
 
 @media screen and (min-width: 1000px) {

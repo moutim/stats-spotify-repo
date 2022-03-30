@@ -4,7 +4,7 @@ class ItemList extends Component {
   render() {
     const { url, name, index, type } = this.props;
     return (
-      <div>
+      <div className="itemList">
           <figure>
               <img src={ url } alt={ name } />
               <div>
