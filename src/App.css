@@ -10,6 +10,39 @@ body {
   font-family: 'Tisa Sans Pro', sans-serif;
 }
 
-main {
-  /* margin: 0 10px; */
+@media screen and (min-width: 700px) {
+  .mainLogin p {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .mainLogin {
+    padding-bottom: 30% !important;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .mainLogin p {
+    font-size: 45px !important;
+  }
+
+  .containerCards {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .containerCards img {
+    max-width: 50% !important;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .mainLogin {
+    background: url(./images/teste2.svg) no-repeat !important;
+    background-size: auto !important;
+    background-position: center !important;
+    padding-bottom: 20% !important;
+  }
 }

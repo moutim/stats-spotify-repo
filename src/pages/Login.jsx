@@ -17,13 +17,15 @@ class Login extends Component {
     <>
         <main>
             <section className="mainLogin">
+              <div>
                 <p>Descubra as músicas e artistas que você mais escutou ao longo do tempo no Spotify</p>
                 <button onClick={ this.handleLogin }>
                   ENTRAR
                   <img src={ logoSpotify } alt="Logo do Spotify" />
                 </button>
+              </div>
             </section>
-            <section>
+            <section className="containerCards">
               <CardIllustration
                 title="Dados a partir da sua conta do Spotify"
                 description="Veja os artistas, músicas e gêneros que você mais escuta, mude entre 1 mês, 6 meses ou AllTime para ver os dados por período. Esses dados são atualizados diariamente."
