@@ -73,7 +73,7 @@ header nav img {
 .exit {
     margin-top: 20px;
     font-size: 22px;
-    color: rgba(0, 0, 0, 0.8) !important;
+    color: rgba(0, 0, 0, 0.7) !important;
 }
 
 .userImageHeader {
@@ -81,4 +81,38 @@ header nav img {
     height: 45px;
     border-radius: 50%;
     filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.8));
+}
+
+.linksDesktop {
+    display: none;
+}
+
+.linksDesktop ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 25px;
+}
+
+.linksDesktop ul a {
+    text-decoration: none;
+    color: black;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.linksDesktop ul a:hover {
+    color: rgba(195, 22, 39, 0.8);
+}
+
+@media screen and (min-width: 1100px) {
+    .imageNav {
+        display: none;
+    }
+
+    .linksDesktop {
+        display: block;
+        display: flex;
+    }
 }

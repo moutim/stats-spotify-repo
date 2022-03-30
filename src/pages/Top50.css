@@ -6,6 +6,7 @@
     border-radius: 20px;
     color: white;
     box-shadow: 0px 4px 15px #000000;
+    justify-content: center;
 }
 .top-50 h2 {
     font-size: 21px;
@@ -55,4 +56,30 @@
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.35);
 }
 
+@media screen and (min-width: 700px) {
+    .itemList {
+        width: 30% !important;
+        height: auto !important;
+    }
 
+    .itemList figure figcaption {
+        text-align: center;
+        line-height: 15px;
+    }
+    
+    .itemList figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .itemList figure img {
+        max-width: 50%;
+        margin: auto;
+    }
+
+    .name-item {
+        width: auto;
+    }
+}

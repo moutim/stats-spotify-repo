@@ -43,7 +43,8 @@ class NavBar extends Component {
     return (
       <>
         <div 
-          className={ itsShowing ? 'nav-links showNav animate__animated animate__bounceInRight' : 'hideNav'}>
+          className={ itsShowing ? 'nav-links showNav animate__animated animate__bounceInRight' : 'hideNav'}
+        >
           <img 
             className="close-menu" src={ closeMenu }
             alt="Icone de um X"
@@ -65,12 +66,24 @@ class NavBar extends Component {
             <img src={ logo } alt="Logotipo Stats Spotify" />
           </div>
           <nav>
-            <img 
-            src={ urlImage ? urlImage : menu }
-            className={ urlImage ? 'userImageHeader' : ''}
-            alt="Icone de menu"
-            onClick={ this.handleOpenMenu }
-            />
+            <div className="linksDesktop">
+              <ul>
+                <li><Link to="/profile">Top 3</Link></li>
+                <li><Link to="/musics">Músicas</Link></li>
+                <li><Link to="/artists">Artistas</Link></li>
+                <li><Link to="/playlists">Playlists</Link></li>
+                <li><a className="exit" href="#f">Sair</a></li>
+              </ul>
+            </div>
+
+            <div className="imageNav">
+              <img 
+              src={ urlImage ? urlImage : menu }
+              className={ urlImage ? 'userImageHeader' : ''}
+              alt="Icone de menu"
+              onClick={ this.handleOpenMenu }
+              />
+            </div>
           </nav>
         </header>
         

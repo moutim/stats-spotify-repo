@@ -44,6 +44,7 @@ class TopMusics extends Component {
           <article className="top-50">
           <h2>Lista com as 50 músicas que você mais escutou!</h2>
           <TimeSelectionButtons handleSelectTime={ this.handleSelectTime } />
+          {/* <div className="container-items"> */}
             { loading ? <p>loading...</p> :
               musics.map(({ name, album: { images }, artists }, index) => {
                 const { url } = images[0];
@@ -59,6 +60,7 @@ class TopMusics extends Component {
                 )
               })
             }
+          {/* </div> */}
           </article>
         </main>
       </>

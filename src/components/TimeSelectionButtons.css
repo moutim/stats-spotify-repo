@@ -1,6 +1,7 @@
 .box-buttons {
     text-align: center;
     margin: 10px 0;
+    width: 100% !important;
 }
 
 .box-buttons button {
