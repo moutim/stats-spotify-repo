@@ -17,3 +17,12 @@
     flex-direction: column;
     align-items: center;
 }
+
+.playlistCreated {
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+}

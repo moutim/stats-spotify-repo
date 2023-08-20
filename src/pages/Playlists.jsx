@@ -8,6 +8,7 @@ import { addMusicsPlaylist, createPlaylist, getUserInfo, getUserTopMusics } from
 class Playlists extends Component {
   state = {
     period: 'medium',
+    linkPlaylist: ''
   }
   handleSelectPeriod = ({ target: { id }}) => this.setState({ period: id });
 
@@ -20,10 +21,11 @@ class Playlists extends Component {
   handleCreatePlaylist = async () => {
     const { period } = this.state;
     const { id } = await getUserInfo();
-    const {id: playlistId } = await createPlaylist(this.convertPeriodToTitle(period), id);
+    const data = await createPlaylist(this.convertPeriodToTitle(period), id);
     const { items } = await getUserTopMusics(period);
     const listMusics = items.map(({ uri }) => uri);
-    await addMusicsPlaylist(playlistId, listMusics);
+    await addMusicsPlaylist(data.id, listMusics);
+    this.setState({ linkPlaylist: data.external_urls.spotify })
   }
   render() {
     return (
@@ -38,6 +40,12 @@ class Playlists extends Component {
           <TimeSelectionButtons
           handleSelectTime={ this.handleSelectPeriod }
           />
+          {
+            this.state.linkPlaylist && 
+              <a target="_blank" href={ this.state.linkPlaylist } className="playlistCreated" rel="noreferrer">
+                Playlist criada! Clique aqui para abrir
+              </a>
+          }
           <button 
             type="button"
             onClick={ this.handleCreatePlaylist }

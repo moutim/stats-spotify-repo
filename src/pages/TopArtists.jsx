@@ -18,6 +18,7 @@ class TopArtists extends Component {
     let genres = {};
     const { items } = await getUserTopArtists();
     items.forEach((item) => arrGenres = [...arrGenres, ...item.genres]);
+    console.log(items.genres);
     arrGenres.forEach((item) => genres[item] = item);
     this.setState({ artists: items, loading: false, genres: Object.keys(genres) });
   }
@@ -43,12 +44,11 @@ class TopArtists extends Component {
           <TimeSelectionButtons handleSelectTime={ this.handleSelectTime } />
             { loading ? <p>loading...</p> :
               artists.map(({ name, images }, index) => {
-                const { url } = images[0];
                 return (
                   <ItemList 
                     key={ name }
                     index={ index + 1}
-                    url={ url }
+                    url={ images.length && images[0].url }
                     name={ name }
                     type={'Artista'}
                   />
