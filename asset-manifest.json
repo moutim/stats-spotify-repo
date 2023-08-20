@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/stats-spotify-repo/static/css/main.4cb2aebe.css",
-    "main.js": "/stats-spotify-repo/static/js/main.f4d34683.js",
+    "main.css": "/stats-spotify-repo/static/css/main.fae68674.css",
+    "main.js": "/stats-spotify-repo/static/js/main.af4f9c8f.js",
     "static/js/787.b18d0079.chunk.js": "/stats-spotify-repo/static/js/787.b18d0079.chunk.js",
     "static/media/illustration-03.svg": "/stats-spotify-repo/static/media/illustration-03.5e933bc3a5c544a57a3d937e5d029be3.svg",
     "static/media/bronze-crown.png": "/stats-spotify-repo/static/media/bronze-crown.be6926c3c499ea0d9b54.png",
     "static/media/silver-crown.png": "/stats-spotify-repo/static/media/silver-crown.b93f80e6dc68213acf65.png",
+    "static/media/illustration-06.svg": "/stats-spotify-repo/static/media/illustration-06.e19e6ae6657b7f21445c00c1e0f00342.svg",
     "static/media/illustration-01.svg": "/stats-spotify-repo/static/media/illustration-01.ed970916125eafc40c7da36aa30dcf51.svg",
     "static/media/illustration-04.svg": "/stats-spotify-repo/static/media/illustration-04.f950ef184f6b76d98778df11a15daaac.svg",
     "static/media/illustration-02.svg": "/stats-spotify-repo/static/media/illustration-02.9110474218514e40174ce40cd419df08.svg",
     "static/media/illustration-05.svg": "/stats-spotify-repo/static/media/illustration-05.16c06eeea7ac13577cdee8f5711a7772.svg",
     "static/media/logo.svg": "/stats-spotify-repo/static/media/logo.b636783022241ba7c2dc24ffe0e1427b.svg",
     "static/media/gold-crown.png": "/stats-spotify-repo/static/media/gold-crown.286aefc7b430253dfc69.png",
-    "static/media/background-login.svg": "/stats-spotify-repo/static/media/background-login.71389904163a449ea3b4.svg",
+    "static/media/teste2.svg": "/stats-spotify-repo/static/media/teste2.83dafa431f0873414eb3.svg",
+    "static/media/teste.svg": "/stats-spotify-repo/static/media/teste.3914ad350a3d8d1a2f34.svg",
     "index.html": "/stats-spotify-repo/index.html",
-    "main.4cb2aebe.css.map": "/stats-spotify-repo/static/css/main.4cb2aebe.css.map",
-    "main.f4d34683.js.map": "/stats-spotify-repo/static/js/main.f4d34683.js.map",
+    "main.fae68674.css.map": "/stats-spotify-repo/static/css/main.fae68674.css.map",
+    "main.af4f9c8f.js.map": "/stats-spotify-repo/static/js/main.af4f9c8f.js.map",
     "787.b18d0079.chunk.js.map": "/stats-spotify-repo/static/js/787.b18d0079.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cb2aebe.css",
-    "static/js/main.f4d34683.js"
+    "static/css/main.fae68674.css",
+    "static/js/main.af4f9c8f.js"
   ]
 }
