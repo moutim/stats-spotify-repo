@@ -19,7 +19,7 @@ class App extends Component {
       <Provider store={ store }>
         <NavBar />
         <Switch>
-          <Route path="/" component={ Login } />
+          <Route exact path="/" component={ Login } />
           <Route path="/redirect" component={ RedirectPage }/>
           <Route path="/profile" component={ Profile } />
           <Route path="/musics" component={ TopMusics } />
