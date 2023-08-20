@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { redirectAcessURL } from '../service/getAcessToken';
+import { redirectAcessURL } from '../service/getAcessToken.js';
 import './Login.css';
 import logoSpotify from '../images/spotify-logo.png';
 import CardIllustration from '../components/CardIllustration';

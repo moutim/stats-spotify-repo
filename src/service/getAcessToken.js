@@ -46,7 +46,11 @@ const getAcessToken = async () => {
   }
 }
 
-module.exports = {
+export {
   redirectAcessURL,
-  getAcessToken,
+  getAcessToken
 }
+// module.exports = {
+//   redirectAcessURL,
+//   getAcessToken,
+// }
