@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/stats-spotify-repo/static/css/main.fae68674.css",
-    "main.js": "/stats-spotify-repo/static/js/main.e295431e.js",
+    "main.js": "/stats-spotify-repo/static/js/main.0958cec9.js",
     "static/js/787.b18d0079.chunk.js": "/stats-spotify-repo/static/js/787.b18d0079.chunk.js",
     "static/media/illustration-03.svg": "/stats-spotify-repo/static/media/illustration-03.5e933bc3a5c544a57a3d937e5d029be3.svg",
     "static/media/bronze-crown.png": "/stats-spotify-repo/static/media/bronze-crown.be6926c3c499ea0d9b54.png",
@@ -17,11 +17,11 @@
     "static/media/teste.svg": "/stats-spotify-repo/static/media/teste.3914ad350a3d8d1a2f34.svg",
     "index.html": "/stats-spotify-repo/index.html",
     "main.fae68674.css.map": "/stats-spotify-repo/static/css/main.fae68674.css.map",
-    "main.e295431e.js.map": "/stats-spotify-repo/static/js/main.e295431e.js.map",
+    "main.0958cec9.js.map": "/stats-spotify-repo/static/js/main.0958cec9.js.map",
     "787.b18d0079.chunk.js.map": "/stats-spotify-repo/static/js/787.b18d0079.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fae68674.css",
-    "static/js/main.e295431e.js"
+    "static/js/main.0958cec9.js"
   ]
 }
