@@ -13,7 +13,7 @@ class Profile extends Component {
       <>
       <main className="main-general">
         <CardIllustration
-          title={`Olá ${name.split(' ')[0]}, esse é o seu TOP 3 artistas e músicas`}
+          title={`Olá ${name && name.split(' ')[0]}, esse é o seu TOP 3 artistas e músicas`}
           description="Os dados abaixo são dos últimos 6 meses, para acessar a lista com seleção de período, clique no menu acima!"
           url={ illustration03 }
         />

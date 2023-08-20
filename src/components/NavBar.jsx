@@ -20,10 +20,10 @@ class NavBar extends Component {
   async componentDidMount() {
     const { sendUser } = this.props;
     const { display_name, images } = await getUserInfo();
-    this.setState({ name: display_name, urlImage: images[0].url });
+    this.setState({ name: display_name, urlImage: images && images[0].url });
     const info = {
       name: display_name,
-      urlImage: images[0].url,
+      urlImage: images && images[0].url,
     }
     sendUser(info);
   }

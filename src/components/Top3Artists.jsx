@@ -24,7 +24,7 @@ class Top3Artists extends Component {
             <div className="box-cards">
               {
                 loading ? <p>Carregando...</p> : (
-                    artists.map(({ name, images}, index) => (
+                    artists && artists.map(({ name, images}, index) => (
                         index < 3 ? 
                         <Card 
                         key={ name }
