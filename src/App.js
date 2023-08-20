@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <Provider store={ store }>
         <NavBar />
-        <Switch>
+        <Switch basename="/stats-spotify-repo">
           <Route path="/" component={ Login } />
           <Route path="/redirect" component={ RedirectPage }/>
           <Route path="/profile" component={ Profile } />
