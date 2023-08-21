@@ -24,7 +24,7 @@ const headersPlaylist = (time) => {
         },
         body: JSON.stringify({
             "name": `Top 50 músicas - ${time} - ${month}/${year}`,
-            "description": `Playlist criada em ${currentData} com base na suas músicas mais escutadas - Desenvolvido por Vitor Moutim - https://moutim-stats-spotify.herokuapp.com/`,
+            "description": `Playlist criada em ${currentData} com base na suas músicas mais escutadas - Desenvolvido por Vitor Moutim - https://stats-spotify-repo.vercel.app/`,
             "public": true
         })
     }
