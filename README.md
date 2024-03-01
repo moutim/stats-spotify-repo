@@ -31,6 +31,7 @@ Este projeto utiliza a API do Spotify para fornecer estatísticas personalizadas
 ## Como Usar
 
 Para começar, envie seu email do Spotify para ter acesso ao beta da aplicação: moutimg@gmail.com
+
 Uma vez enviado, aguarde confirmação e acesse o [deploy da aplicação no Vercel](https://stats-spotify-repo.vercel.app/). Faça login com sua conta do Spotify e aproveite as funcionalidades personalizadas.
 
 ## Tecnologias Utilizadas
